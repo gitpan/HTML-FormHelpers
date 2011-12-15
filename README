@@ -2,7 +2,7 @@ NAME
     HTML::FormHelpers - Useful routines for generating HTML form elements
 
 VERSION
-    version 0.001
+    version 0.002
 
 SYNOPSIS
         use HTML::FormHelpers;
