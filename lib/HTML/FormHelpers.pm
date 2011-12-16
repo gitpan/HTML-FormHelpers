@@ -1,6 +1,6 @@
 package HTML::FormHelpers;
 {
-  $HTML::FormHelpers::VERSION = '0.002';
+  $HTML::FormHelpers::VERSION = '0.003';
 }
 # ABSTRACT: Useful routines for generating HTML form elements
 
@@ -43,7 +43,7 @@ sub radio {
     while ($i < @$values) { 
         my ($val,$disp) = @{$values}[$i, $i+1];
         my $checked = $on eq $val ? 'checked="checked"' : "";
-        push @ret, qq(<input type="radio" name="$fname" value="$val" $checked $attributes />$disp);
+        push @ret, qq(<label><input type="radio" name="$fname" value="$val" $checked $attributes />$disp</label>);
     } continue { $i+=2 }
     return ref $sep eq 'ARRAY' ? @ret : join $sep,@ret;
 }
@@ -112,7 +112,7 @@ HTML::FormHelpers - Useful routines for generating HTML form elements
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 
