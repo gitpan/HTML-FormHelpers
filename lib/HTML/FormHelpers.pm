@@ -1,6 +1,6 @@
 package HTML::FormHelpers;
 {
-  $HTML::FormHelpers::VERSION = '0.003';
+  $HTML::FormHelpers::VERSION = '0.004';
 }
 # ABSTRACT: Useful routines for generating HTML form elements
 
@@ -27,7 +27,8 @@ sub process_attributes {
 }
 
 sub process_args {
-    my $obj = shift if blessed $_[0];
+    my $obj;
+    $obj = shift if blessed $_[0];
     my $attributes = &process_attributes;
     my $idx = try { $obj->can('id') && "[" . ($obj->id // "") . "]" } catch { "" };
     my $name = $_[0] . $idx;
@@ -104,6 +105,7 @@ sub checkbox {
 1;
 
 __END__
+
 =pod
 
 =head1 NAME
@@ -112,11 +114,11 @@ HTML::FormHelpers - Useful routines for generating HTML form elements
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 SYNOPSIS
 
-    use HTML::FormHelpers;
+    use HTML::FormHelpers qw<:all>;
 
     print text('foo');   # generate HTML for an input tag
 
@@ -182,4 +184,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

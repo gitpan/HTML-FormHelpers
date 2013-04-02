@@ -5,11 +5,11 @@ author:
 build_requires:
   Test::More: 0
   Test::XPath: 0
-  perl: 5.10.0
+  perl: v5.10.0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300003, CPAN::Meta::Converter version 2.112150'
+generated_by: 'Dist::Zilla version 4.300032, CPAN::Meta::Converter version 2.130880'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -25,4 +25,4 @@ requires:
 resources:
   bugtracker: http://github.com/perlpilot/HTML-FormHelpers/issues
   repository: git://github.com/perlpilot/HTML-FormHelpers.git
-version: 0.003
+version: 0.004
